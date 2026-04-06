@@ -19,8 +19,7 @@ def check_win(board, player):
             
     return False # No winning combination found
 
-
-def main():
+def play_game():
     # Initialize board with numbers 1-9 to guide players
     board = [str(i) for i in range(1, 10)]
     current_player = "X"
@@ -32,6 +31,8 @@ def main():
             choice = int(input(f"Player {current_player}, choose a spot (1-9): ")) - 1
             if board[choice] in ["X", "O"]:
                 print("Spot taken! Try again.")
+                # Small pause so the user can read the message before the screen clears
+                input("Press Enter to continue...")
                 continue
             
             # Update board and check for win
@@ -48,9 +49,19 @@ def main():
             
         except (ValueError, IndexError):
             print("Invalid input. Please enter a number between 1 and 9.")
+            input("Press Enter to continue...")
 
     draw_board(board)
     print("It's a draw!")
+
+def main():
+    while True:
+        play_game()
+        # Ask the user if they want to restart
+        restart = input("\nDo you want to play again? (y/n): ").lower()
+        if restart != 'y':
+            print("Thanks for playing!")
+            break
 
 if __name__ == "__main__":
     main()
