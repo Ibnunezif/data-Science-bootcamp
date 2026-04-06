@@ -7,4 +7,7 @@ def number_of_vowels  (string_data):
 
     return res 
 
-print(number_of_vowels("Abdul"))
+while True:
+    print("Give me string that you want to count te vowels for:")
+    s = input()
+    print(f"Number of vowels in string is = {number_of_vowels(s)}")

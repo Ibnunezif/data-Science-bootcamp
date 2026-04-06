@@ -6,4 +6,7 @@ def largest_number(list_data): # accepts list as an input
 
     return largest # return once computed
 
-print(largest_number([7,8,45,3,-9,67,569,12]))
+while True:
+    print("Give me space separated number (e.g 2 3 4 5) then press Enter")
+    number = list(map(int,input().split()))
+    print(f"The largest nnumber is = {largest_number(number)}")
