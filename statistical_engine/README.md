@@ -49,7 +49,7 @@ As sample size increases, simulated probability approaches theoretical probabili
 ## ⚙️ Setup Instructions
 
 ```bash
-git clone <your-repo-link>
+git clone https://github.com/Ibnunezif/data-Science-bootcamp.git
 cd statistical_engine
 python main.py
 ```
