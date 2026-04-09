@@ -33,6 +33,7 @@ df["Age"] = df["Age"].fillna(df["Age"].median())
 df["Embarked"] = df["Embarked"].fillna(df["Embarked"].mode()[0])
 
 df.drop(columns=["Cabin"], inplace=True)
+
 df.drop_duplicates(inplace=True)
 
 print("Missing values handled and dataset cleaned.")
